@@ -74,7 +74,8 @@ $(document).ready(function(){
 
   var api = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=c4af8f391b8e7ff8a34f4aaa15a50f4e';
   $.getJSON(api, function(data){
-    console.log(data.main.temp);
-  $('#weather').text(data.main.temp);
+    var weather = data.main.temp - 273;
+    weather = Math.round(weather * 10 / 10)
+  $('#weather').text(weather + "C");
   });
 });
