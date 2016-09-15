@@ -1,12 +1,20 @@
+ENV['RACK_ENV'] ||= 'development'
+
 require 'sinatra/base'
 require_relative 'data_mapper_setup'
-
-ENV['RACK_ENV'] ||= 'development'
+require_relative 'models/thermostat.rb'
 
 class App < Sinatra::Base
 
+  set :public_folder, File.dirname(__FILE__) + '/public'
+  set :views, File.dirname(__FILE__) + '/views'
+
   get '/' do
-    'Hello!'
+    erb :index
+  end
+
+  post '/' do
+    thermostat = Thermostat.new(temperature: params[:thermostat])
   end
 
   # start the server if ruby file executed directly
