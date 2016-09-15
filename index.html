@@ -6,25 +6,45 @@
     <body>
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-      <section>
-        <h1>Temperature: <div id="temperature"></div></h1>
-        <div>
-          <ul>
-            <button id="temperature-increase">+</button>
-            <button id="temperature-decrease">-</button>
-            <button id="temperature-reset">Reset</button>
-            <button id="switchpowersaving-off">Power save</button>
-          </ul>
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+        <section>
+          <h1>Temperature: <div id="temperature"></div></h1>
+          <div>
+            <ul>
+              <button id="temperature-increase">+</button>
+              <button id="temperature-decrease">-</button>
+              <button id="temperature-reset">Reset</button>
+              <button id="switchpowersaving-off">Power save</button>
+            </ul>
+        </div>
+        Powersave: <div id="powersave"></div>
+        <br>
+        <p>
+          Enter a city:
+        </p>
+        <form class="" action="index.html" method="post">
+          <input type="text" id="city-choice" name="citychoice"> </input>
+          <input type="button" name="submit" value="Submit">
+        </form>
+        <br>
+        Current temperature in <div class="cityname"></div> <div id="weather"></div>
+        </section>
+        </div>
+        <div class="col-md-3">
+        </div>
       </div>
-      Powersave: <div id="powersave"></div>
-      Current temperature: <div id="weather"></div>
-      </section>
       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
       <script src="src/thermostat.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
     </body>
 </html>

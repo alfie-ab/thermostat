@@ -68,6 +68,7 @@ $(document).ready(function(){
     $('#powersave').text(thermostat.powersave);
   });
 
+
   function updateColour(){
     $('#temperature').attr('class',thermostat.displayEnergyUsage());
   };
@@ -78,4 +79,20 @@ $(document).ready(function(){
     weather = Math.round(weather * 10 / 10)
   $('#weather').text(weather + "C");
   });
+
+
+    $('input[name=submit]').on('click',function(){
+    var city = $("#city-choice").val();
+
+    var changeapi = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=c4af8f391b8e7ff8a34f4aaa15a50f4e';
+
+      $.getJSON(changeapi, function(data){
+        var changeweather = data.main.temp - 273;
+        changeweather = Math.round(changeweather * 10 / 10)
+      $('#weather').text(changeweather + "C");
+      $('.cityname').text(city)
+      });
+  });
+
+
 });
