@@ -34,7 +34,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.showTemperature());
-    $('#temperature').attr('class', thermostat.colourSwitch());
+    $('body').attr('class', thermostat.colourSwitch());
   }
 
 });

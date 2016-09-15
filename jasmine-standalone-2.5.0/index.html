@@ -12,16 +12,21 @@
 
   <body>
 
+    <div id="page-wrap">
     <section>
+      <h1 id="header">Have a good day!</h1>
 
       <h1 id="temperature"></h1>
-      <h2 id="location"></h2>
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
+        <div id='buttons'>
+          <button id="temperature-down">-</button>
+          <button id="temperature-up">+</button>
+          <button id="temperature-reset">reset</button>
+          <button id="powersaving-switch">PSM on/off</button>
+        </div>
+        <br>
         power saving mode is <span id="powersaving-status">on</span>
-        <button id="powersaving-switch">PSM on/off</button>
+      <h3 id="location"></h3>
 
       <form>
         <select id="selectCity">
@@ -36,6 +41,7 @@
       </p>
 
     </section>
+  </div>
 
   </body>
 
