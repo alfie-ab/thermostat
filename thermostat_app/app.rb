@@ -3,6 +3,7 @@ ENV['RACK_ENV'] ||= 'development'
 require 'sinatra/base'
 require_relative 'data_mapper_setup'
 require_relative 'models/thermostat.rb'
+require 'json'
 
 class App < Sinatra::Base
 
@@ -10,11 +11,13 @@ class App < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/views'
 
   get '/' do
+    # content_type :json
+    # {temperature: thermostat.temperature}.to_json
     erb :index
   end
 
-  post '/' do
-    thermostat = Thermostat.new(temperature: params[:thermostat])
+  post '/thermostat' do
+    thermostat = Thermostat.create(temperature: params[:temperature])
   end
 
   # start the server if ruby file executed directly
