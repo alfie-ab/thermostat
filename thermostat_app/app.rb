@@ -11,13 +11,16 @@ class App < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/views'
 
   get '/' do
-    # content_type :json
-    # {temperature: thermostat.temperature}.to_json
     erb :index
   end
 
+  get '/thermostat' do
+    temperature = Thermostat.last
+    {temperature: thermostat.temperature, powermode: thermostat.powerMode}
+  end
+
   post '/thermostat' do
-    thermostat = Thermostat.create(temperature: params[:temperature])
+    thermostat = Thermostat.create(temperature: params[:temperature], powermode: params[:powermode])
   end
 
   # start the server if ruby file executed directly

@@ -9,5 +9,6 @@ class Thermostat
 
   property :id, Serial
   property :temperature, Integer
+  property :powermode, Boolean
 
 end

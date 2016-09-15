@@ -102,7 +102,7 @@ $(document).click(function(){
   document.getElementById("current_temp").innerHTML = thermostat.temperature;
   document.getElementById("power_mode").innerHTML = thermostat.powerMode;
   document.getElementById("indicator").value = thermostat.temperature;
-  $.post('http://localhost:9292/thermostat', {temperature: thermostat.temperature});
+  $.post('http://localhost:9292/thermostat', {temperature: thermostat.temperature, powermode: thermostat.powerMode});
 });
 
 
