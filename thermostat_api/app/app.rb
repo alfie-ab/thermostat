@@ -1,11 +1,15 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
-require_relative './data_mapper_setup'
+require './data_mapper_setup'
 
 class Thermostat < Sinatra::Base
+
+  set :public_folder, File.dirname(__FILE__) + '/public'
+  set :views, File.dirname(__FILE__) + '/views'
+
   get '/' do
-    'Hello Thermostat!'
+    erb :layout
   end
 
   # start the server if ruby file executed directly

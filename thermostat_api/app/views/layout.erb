@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Thermostat</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="interface_api.js"></script>
+    <script src="Thermostat_api.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"></script>
+
+  </head>
+
+  <body>
+
+    <div id="page-wrap">
+    <section>
+      <h1 id="header">Have a good day!</h1>
+
+      <h1 id="temperature"></h1>
+      <p>
+        <div id='buttons'>
+          <button id="temperature-down">-</button>
+          <button id="temperature-up">+</button>
+          <button id="temperature-reset">reset</button>
+          <button id="powersaving-switch">PSM on/off</button>
+        </div>
+        <br>
+        power saving mode is <span id="powersaving-status">on</span>
+      <h3 id="location"></h3>
+
+      <form>
+        <select id="selectCity">
+          <option value="">Select location</option>
+          <option value="UK/London">London</option>
+          <option value="FR/Paris">Paris</option>
+          <option value="JP/Tokyo">Tokyo</option>
+        </select>
+      </form>
+
+      </p>
+
+    </section>
+  </div>
+
+  </body>
+
+</html>

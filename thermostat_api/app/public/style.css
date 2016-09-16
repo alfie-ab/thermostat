@@ -1,0 +1,32 @@
+.green {
+  background-image: url("http://img.wallpaperfolder.com/f/516C49B93B54/beautiful-red-umbrella-rain-8200.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.yellow {
+  background-image: url("http://orig07.deviantart.net/6ade/f/2013/298/8/d/blue_sky_sun_by_dinesh_musiclover-d6rqlca.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.red {
+  background-image: url("http://wallpaper.pickywallpapers.com/2560x1600/sunny-day-at-the-beach.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+body {
+  text-align: center;
+  padding-top: 200px;
+  background-color:
+}
+
+#page-wrap {
+  text-align: center;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+#temperature {
+  font-size: 6em;
+}
