@@ -15,6 +15,7 @@ $(document).ready(function() {
   $('#temperature-up').click(function() {
     thermostat.increaseTemperature();
     updateTemperature();
+    $.post("http://localhost:9292/temperature", { temp: thermostat._temperature });
   });
 
   $('#temperature-down').click(function() {

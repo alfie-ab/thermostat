@@ -112,6 +112,7 @@ DEPENDENCIES
   database_cleaner
   datamapper
   dm-postgres-adapter
+  json
   pg
   rake
   rspec

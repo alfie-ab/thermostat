@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 # A sample Gemfile
 source "https://rubygems.org"
-
-ruby '2.3.0'
 # gem "rails"
 
 gem 'sinatra'
@@ -11,6 +9,7 @@ gem 'datamapper'
 gem 'dm-postgres-adapter'
 gem 'database_cleaner'
 gem 'pg'
+gem 'json'
 
 gem 'capybara'
 gem 'rspec'
