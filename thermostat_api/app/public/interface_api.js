@@ -15,7 +15,7 @@ $(document).ready(function() {
   $('#temperature-up').click(function() {
     thermostat.increaseTemperature();
     updateTemperature();
-    $.post("http://localhost:9292/temperature", { temp: thermostat._temperature });
+      $.post("http://localhost:9292/temperature", { temp: thermostat._temperature });
   });
 
   $('#temperature-down').click(function() {
@@ -31,6 +31,7 @@ $(document).ready(function() {
   $('#powersaving-switch').click(function() {
     thermostat.powerSaveSwitch();
     $('#powersaving-status').text(thermostat._powerSaveMode);
+    // $.post("http://localhost:9292/temperature", { powermode: thermostat._powerSaveMode});
   });
 
   function updateTemperature() {

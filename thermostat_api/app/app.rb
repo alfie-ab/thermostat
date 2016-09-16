@@ -15,7 +15,7 @@ class App < Sinatra::Base
   end
 
   post '/temperature' do
-     Thermostat.create(temp: params[:temp])
+    thermostat = Thermostat.create(temp: params[:temp])
   end
 
   # start the server if ruby file executed directly

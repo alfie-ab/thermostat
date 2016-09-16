@@ -7,5 +7,6 @@ class Thermostat
 
   property :id,   Serial
   property :temp, Integer
+  property :powermode, String
 
 end
